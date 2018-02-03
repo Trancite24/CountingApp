@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Add New</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  
+  <link rel="stylesheet" type="text/css" href="css/normalize.css">
+  <link rel="stylesheet" type="text/css" href="css/framework.css">
+  <link rel="stylesheet" type="text/css" href="css/washington.css">
+  <script src="js/webfont.js"></script>
+  <script>
+    WebFont.load({
+      google: {
+        families: ["Montserrat:400,700"]
+      }
+    });
+  </script>
+  <script type="text/javascript" src="js/modernizr.js"></script>
+  <link rel="shortcut icon" type="image/x-icon" href="images/logoStandford32.ico">
+  <link rel="apple-touch-icon" href="images/logoStandford32.ico">
+
+  <link href="css/ionicons.min.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+  <section class="w-section mobile-wrapper">
+
+    <div class="page-content" id="main-stack">
+      <div class="w-nav navbar" data-collapse="all" data-animation="over-left" data-duration="400" data-contain="1" data-easing="ease-out-quint" data-no-scroll="1">
+        <div class="w-container">
+          <div class="wrapper-mask" data-ix="menu-mask"></div>
+          <div class="navbar-title"><b>Add New Count</b></div>
+        </div>
+      </div>
+      <div class="body padding">
+        <div class="w-form">
+          <form id="email-form" name="email-form" data-name="Email Form" action="#">
+            <div class="separator-fields"></div>
+            <div class="separator-fields"></div>
+
+            <div class="row-input-list">
+              <label class="label-form" for="title">Bus Halt Name</label>
+              <input class="w-input input-form in-grey" id="title" type="text" name="title" data-name="title" required="required">
+              <div class="separator-fields"></div>
+            </div>
+
+            <div class="row-input-list">
+              <label class="label-form" for="title">In Count</label>
+              <input class="w-input input-form in-grey" id="title" type="text" name="title" data-name="title" required="required">
+              <div class="separator-fields"></div>
+            </div>
+
+            <div class="row-input-list">
+              <label class="label-form" for="title">Out Count</label>
+              <input class="w-input input-form in-grey" id="title" type="text" name="title" data-name="title" required="required">
+              <div class="separator-fields"></div>
+            </div>
+            <input class="w-button action-button" type="button" value="Add New Record" data-wait="Please wait..." onclick="AddRecords()">
+            <br><br>
+            <input class="w-button action-button" type="button" value="View All Records" data-wait="Please wait..." onclick="ViewRecords()">
+            <br><br>
+            <input class="w-button action-button" type="button" value="End Trip" data-wait="Please wait..." onclick="EndTrip()">
+          </form>
+        </div>
+      </div>
+    </div>
+    <img style="position: fixed; bottom:0; left:0;" src="images/bus.png"/>
+    <div class="page-content loading-mask" id="new-stack">
+      <div class="loading-icon">
+        <div class="navbar-button-icon icon ion-load-d"></div>
+      </div>
+    </div>
+    <div class="shadow-layer"></div>
+  </section>
+
+  <script type="text/javascript" src="js/jquery.min.js"></script>
+  <script type="text/javascript" src="js/framework.js"></script>
+  <!--[if lte IE 9]><script src="js/placeholders.min.js"></script><![endif]-->
+  <script>
+      function ViewRecords() {
+          window.location.href = "view.html";
+      }
+      function AddRecords() {
+          alert("Record is added");
+          window.location.href = "addrecord.html";
+      }
+      function EndTrip() {
+          alert("Trip is Ended");
+          window.location.href = "home.html";
+      }
+  </script>
+</body>
+</html>
